@@ -1,0 +1,77 @@
+
+
+
+body {
+	background-color: lightgrey;
+}
+#firstButton {
+	margin: 0 auto;
+	width: 80px;
+	border: 0px;
+	font-size: 30px;
+	font-family: Arial;
+	color: white;
+	background-color: red;
+} 
+
+#name {
+	border-right: 5px dashed green;
+	border-left: 5px dashed green;
+	border-top:5px solid red;
+	border-bottom: 5px solid red;
+	width: 250px;
+	text-align: center;
+	margin: auto
+}
+
+
+#profilesection {
+	background-color: peachpuff;
+	color: black;
+	text-align: left;
+	width: 500px;
+	margin: auto
+
+	}
+
+#qualsection {
+	background-color: lightcyan;
+	text-align: right;
+	margin: auto;
+	width: 500px;
+}
+
+
+
+
+
+.Name.Email {display: inline;}
+
+h1,h2, h3 {
+	color: Blue;
+}
+
+
+
+
+#number {
+	font-size: 100px;
+	width: 200px;
+	border: 5px solid yellow;
+	margin: auto;
+	text-align: center;
+}
+#butts {
+	/* border: 20px solid green; */
+	width: 260px;
+	margin: auto;
+}
+
+
+.submit {
+	font-size: 10pt;
+}
+#inputs {
+	font-size: 20pt;
+}
+

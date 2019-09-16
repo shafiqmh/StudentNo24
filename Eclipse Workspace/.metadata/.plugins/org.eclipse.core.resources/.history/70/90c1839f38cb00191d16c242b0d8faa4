@@ -1,0 +1,64 @@
+package com.qa.project;
+
+public class Positions extends Game{
+	
+	public static void x_chest() {
+		double x_chest = (int) (Math.random()*1000)%x_length;
+	System.out.println("Chest x: " + x_chest);
+	}
+	public static void y_chest() {
+		double y_chest = (int) (Math.random()*1000)%y_length;
+	System.out.println("Chest y: " + y_chest);
+	}
+	public static void x_person() {
+		double x_person = (int) (Math.random()*1000)%x_length;
+	System.out.println("Person x: " + x_person);
+	}
+	public static void x_chest() {
+		double y_person = (int) (Math.random()*1000)%y_length;
+		System.out.println("Person y: " + y_person);
+	}
+	
+	
+	//initialise start positions and grid size here
+	
+
+	
+	/////	if (x_person == x_chest && y_person == y_chest);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//Need to create a NEW game using game game = new game()
+	// and creeate a new constants class is smae way
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

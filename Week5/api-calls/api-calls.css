@@ -1,0 +1,21 @@
+
+
+#mainName {
+    background-color: lightgreen;
+    border: 5px dashed red;
+    text-align: center;
+}
+#main {
+    background-color: lightcoral;
+    border-top 2px green;
+    border-bottom: 2px green;
+}
+
+#members {
+    background-color: lightgoldenrodyellow
+}
+
+#membersList {
+    background-color: lightblue;
+   
+}

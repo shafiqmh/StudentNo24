@@ -1,0 +1,13 @@
+package com.qa.garageExercise;
+
+public class Garage /*extends Vehicle*/ {
+	Vehicle v1 = new VehicleBuilder().id(001101).buildVehicle();
+	Vehicle v2 = new VehicleBuilder().id(001102).hp(120).buildVehicle();
+	
+}
+
+
+
+
+
+// "Vehicle ID: " + id + "Vehicle name: " + name + "Vehicle colour: " + colour

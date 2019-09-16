@@ -1,0 +1,106 @@
+package com.qa.practicesql;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+public class DBManager {
+    Connection conn = null;
+    Statement stmt = null;
+    static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+    static final String DB_URL = "jdbc:mysql://35.189.117.63:3306/footballteams?useSSL=false";
+    static final String USER = "root";
+    static final String PASS = "admin";
+    
+    public void access_db() throws ClassNotFoundException, SQLException {
+        Class.forName(JDBC_DRIVER);
+        System.out.println("Connecting to database...");
+        conn = DriverManager.getConnection(DB_URL,USER,PASS);
+        System.out.println("Creating statement...");
+        stmt = conn.createStatement();
+        String sql;
+        stmt.executeUpdate("USE footballteams");
+    }
+    
+	public void create_all() throws SQLException {
+		System.out.println("Inserting records into the table...");
+		try {
+		Statement stmt = conn.createStatement();
+		String sql1 = "INSERT INTO footyteams(team, popularity) VALUES('Liverpool FC', 5)";
+		stmt.executeUpdate(sql1);
+		System.out.println("Records Inserted");
+		}
+		catch (Exception sqle) {
+			sqle.printStackTrace();
+		}
+		
+		public void real_all() {
+			String sql = "SELECT * FROM footyteams";
+		       ResultSet rs = stmt.executeQuery(sql);
+		       while(rs.next()){
+		           int id  = rs.getInt("id");
+		           String team = rs.getString("team");
+		           int popularity = rs.getInt("popularity");
+		           //Display values
+		           System.out.print("ID: " + id + " Team: " + team + " Popularity " + popularity + "\r\n");
+		       	rs.close();
+		       }
+		}
+	}
+}
+
+	
+		/*stmt.close();
+		conn.close();*/
+	
+	/*public void read_all() {
+		 String sql = "SELECT * FROM footyteams";
+	       ResultSet rs = stmt.executeQuery(sql);
+	       while(rs.next()){
+	           int id  = rs.getInt("id");
+	           String team = rs.getString("team");
+	           int popularity = rs.getInt("popularity");
+	           //Display values
+	           System.out.print("ID: " + id + " Team: " + team + " Popularity " + popularity + "\r\n");
+	       	rs.close();
+	           }*/
+
+		/*String sql2 = "INSERT INTO footyteams(team, popularity) VALUES('Manchester City', 9)";
+		stmt.executeUpdate(sql2);
+		String sql3 = "INSERT INTO footyteams(team, popularity) VALUES('Arsenal', 7)";
+		stmt.executeUpdate(sql3);
+		System.out.println("Inserted records into the table...");
+		*/
+		
+	
+/*	public void readRecord() {	
+		System.out.println("Creating statement...");
+		stmt = conn.createStatement();
+		String sql2 = "SELECT id, name, date FROM Languages";
+		ResultSet rs = stmt.executeQuery(sql2);
+		while (rs.next()) {
+		  int id = rs.getInt("id");
+		  String name = rs.getString("name");
+		  int date = rs.getInt("date");
+		  System.out.println("ID: " + id + ", name: " + name + ", date: " + date);
+		  }
+		rs.close();
+	}
+		
+	public void updateRecord() {
+		System.out.println("Creating statement...");
+		stmt = conn.createStatement();
+		String sql3 = "UPDATE Languages SET date = 1994 WHERE id in (1, 2)";
+		stmt.executeUpdate(sql3);
+	}
+	
+	public void delRecord() {
+		System.out.println(“Creating statement...”);
+		stmt = conn.createStatement();
+		String sql4 = “DELETE FROM Languages ” + “WHERE id = 1”;
+		stmt.executeUpdate(sql4);
+	}*/
+	

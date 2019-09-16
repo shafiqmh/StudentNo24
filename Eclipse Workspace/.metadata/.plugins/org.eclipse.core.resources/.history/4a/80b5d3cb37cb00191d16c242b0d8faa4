@@ -1,0 +1,23 @@
+package com.qa.project;
+
+public class Positions extends Game{
+	
+	public static void pos() {
+		
+	
+	//create a function to prevent beginning at same pos'
+	//initialise start positions and grid size here
+	
+/*	double x_chest = (int) (Math.random()*1000)%x_length;
+	System.out.println("Chest x: " + x_chest);
+	double y_chest = (int) (Math.random()*1000)%y_length;
+	System.out.println("Chest y: " + y_chest);
+	double x_person = (int) (Math.random()*1000)%x_length;
+	System.out.println("Person x: " + x_person);
+	double y_person = (int) (Math.random()*1000)%y_length;
+	System.out.println("Person y: " + y_person);*/
+	
+	/////	if (x_person == x_chest && y_person == y_chest);
+	}
+	
+}

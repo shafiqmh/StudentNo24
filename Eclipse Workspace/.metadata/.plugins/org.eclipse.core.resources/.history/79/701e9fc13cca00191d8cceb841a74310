@@ -1,0 +1,49 @@
+package com.qa.practicesql;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBManager {
+	
+	public void create_all() {
+		System.out.println("Inserting records int the table...");
+		Statement stmt = conn.createStatement();
+		String sql = "INSERT INTO footyteams(team, popularity) VALUES('Liverpool FC', 5)";
+		String sql = "INSERT INTO footyteams(team, popularity) VALUES('Manchester City', 9)";
+		String sql = "INSERT INTO footyteams(team, popularity) VALUES('Arsenal', 7)";
+		stmt.executeUpdate(sql);
+		System.out.println("Inserted records into the table...");
+	}
+	
+/*	public void readRecord() {	
+		System.out.println("Creating statement...");
+		stmt = conn.createStatement();
+		String sql2 = "SELECT id, name, date FROM Languages";
+		ResultSet rs = stmt.executeQuery(sql2);
+		while (rs.next()) {
+		  int id = rs.getInt("id");
+		  String name = rs.getString("name");
+		  int date = rs.getInt("date");
+		  System.out.println("ID: " + id + ", name: " + name + ", date: " + date);
+		  }
+		rs.close();
+	}
+		
+	public void updateRecord() {
+		System.out.println("Creating statement...");
+		stmt = conn.createStatement();
+		String sql3 = "UPDATE Languages SET date = 1994 WHERE id in (1, 2)";
+		stmt.executeUpdate(sql3);
+	}
+	
+	public void delRecord() {
+		System.out.println(“Creating statement...”);
+		stmt = conn.createStatement();
+		String sql4 = “DELETE FROM Languages ” + “WHERE id = 1”;
+		stmt.executeUpdate(sql4);
+	}*/
+	
+	
+}

@@ -1,0 +1,36 @@
+package com.qa.project;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Game {
+	public static void main(String[] args) {
+		
+		System.out.println("Intro to game");
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("What is the width of your grid? (max 1000)");
+		int x_length = sc.nextInt();
+		System.out.println("What is the length of your grid? (max 1000)");
+		int y_length = sc.nextInt();
+		
+		//String name = sc.next();
+		//// will crash if not int
+		//String player_name = sc.nextLine();
+		
+		int positioner;
+		if (x_length <= y_length) {
+			positioner = x_length;
+		}
+		else {
+			positioner = y_length;
+		}
+		
+		System.out.println("positioner = " + positioner);
+		
+		
+		int chest = (Math.random()*1000)%positioner;
+		System.out.println(chest);
+		
+	}
+}

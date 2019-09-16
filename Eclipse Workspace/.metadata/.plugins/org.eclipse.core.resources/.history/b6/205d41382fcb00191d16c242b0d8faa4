@@ -1,0 +1,45 @@
+package com.qa.project;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Game {
+	public static void main(String[] args) {
+		
+		System.out.println("Intro to game");
+		
+		
+		//establishing size of grid
+		Scanner sc = new Scanner(System.in);
+		System.out.println("What is the width of your grid? (max 1000)");
+		int x_length = sc.nextInt();
+		System.out.println("What is the length of your grid? (max 1000)");
+		int y_length = sc.nextInt();
+		
+		//String name = sc.next();
+		//// will crash if not int
+		//String player_name = sc.nextLine();
+		
+		
+		//Generating random coords for person and chest
+		double x_chest = (int) (Math.random()*1000)%x_length;
+		System.out.println("Chest x: " + x_chest);
+		double y_chest = (int) (Math.random()*1000)%y_length;
+		System.out.println("Chest y: " + y_chest);
+		double x_person = (int) (Math.random()*1000)%x_length;
+		System.out.println("Person x: " + x_person);
+		double y_person = (int) (Math.random()*1000)%y_length;
+		System.out.println("Person y: " + y_person);
+		
+		if (x_person == x_chest && y_person == y_chest)
+		//Distance person is away from chest
+		double distToChest = Math.sqrt(((x_chest-x_person)*(x_chest-x_person)) + ((y_chest-y_person)*(y_chest-y_person)));
+		System.out.println("Dist to Chest: "+distToChest);
+		
+		
+		
+		
+		
+		
+	}
+}

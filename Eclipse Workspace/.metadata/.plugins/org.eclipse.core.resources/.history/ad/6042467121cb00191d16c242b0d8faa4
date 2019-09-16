@@ -1,0 +1,17 @@
+package com.qa.project;
+
+import java.util.Scanner;
+
+public class Game {
+	public static void main(String[] args) {
+		
+		System.out.println("Intro to game");
+		
+		Scanner intro = new Scanner(System.in);
+		System.out.println("Please enter your name");
+	
+	
+	
+	
+	}
+}

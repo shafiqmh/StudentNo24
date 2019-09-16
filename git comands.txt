@@ -1,0 +1,8 @@
+
+Useful git commands
+gid add .			add everything
+git add file.txt		for specific file
+git add *.py			add all python file
+git commit -m			add a message
+git push -u origin master	(origin master) add files to repository
+git pull origin [branch name]	(master) to pull from repository

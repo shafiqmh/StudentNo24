@@ -1,0 +1,24 @@
+package com.qa.practicesql;
+
+import java.sql.*;
+public class jdbc_main{
+
+	
+
+   public static void main(String[] args) throws ClassNotFoundException, SQLException {
+       
+       DBManager dbman = new DBManager();
+       dbman.access_db();
+       //dbman.create_all();
+       //dbman.updateRecord();
+       dbman.read_all();
+       //dbman.insert_all();
+         
+
+//       stmt.executeUpdate("CREATE TABLE footyteams(id INT PRIMARY KEY AUTO_INCREMENT, team VARCHAR(100), popularity INT(1));");
+//       stmt.executeUpdate("INSERT INTO footyteams(team, popularity) VALUES('Liverpool FC', 5)");
+//       stmt.executeUpdate("INSERT INTO footyteams(team, popularity) VALUES('Manchester City', 9)");
+//       stmt.executeUpdate("INSERT INTO footyteams(team, popularity) VALUES('Arsenal', 7)");
+      
+   }
+}

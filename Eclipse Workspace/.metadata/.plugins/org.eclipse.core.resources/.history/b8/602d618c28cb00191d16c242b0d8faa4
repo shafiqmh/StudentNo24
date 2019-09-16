@@ -1,0 +1,21 @@
+package com.qa.project;
+
+public class Person {
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+//Need a distance formula
+//Need a rand function to place person and chest  DONE
+//Need to verify that person doesnt start off ontop of the chest
